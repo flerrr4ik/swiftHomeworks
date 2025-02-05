@@ -11,9 +11,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
-
-
+    @IBAction func showAler(_ sender: Any) {
+        let alert = UIAlertController(title: "Photo Access", message: "Do yo allow to use your phoos?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+        
+        
+    }
+    @IBAction func showActionSheet(_ sender: Any) {
+    }
 }
 
